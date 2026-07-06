@@ -1,0 +1,440 @@
+{
+  "formatVersion": 1,
+  "tdId": "r2.06-td1",
+  "tdLabel": "R2.06 - TD1",
+  "title": "Requêtes avec SQL",
+  "intro": "Formulez, en SQL, sur la base de données exemple, les requêtes d'interrogation suivantes.",
+  "database": {
+    "name": "voyages",
+    "schemaFile": "data/schema.sql",
+    "insertFile": "data/insert.sql"
+  },
+  "canon": {
+    "algo": "sha256",
+    "specVersion": 1
+  },
+  "sections": [
+    {
+      "name": "Rappel : expression des jointures",
+      "items": [
+        {
+          "type": "instruction",
+          "text": "Quand cela est possible, formulez les requêtes suivantes de trois manières différentes."
+        },
+        {
+          "type": "question",
+          "id": "q1",
+          "num": "1",
+          "statement": "Donnez les dates de départ, villes d'arrivée et tarifs des voyages à destination du Maroc.",
+          "expectedCols": 3,
+          "expectedRows": 29,
+          "expectedLabel": "3 attributs, 29 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "53877331014a5bcb6289fdcb5b6c3deabf98706487d40c516788350de0894d33",
+            "f135c26fad8e685b6672634320a3ee73d25f375d73af1fd91ddf46ccdffa3832"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "imbrication"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q2",
+          "num": "2",
+          "statement": "Donnez les dates de départ, villes d'arrivée et pays d'arrivée des voyages réservés des clients ne résidant ni à Paris ni à Marseille.",
+          "expectedCols": 3,
+          "expectedRows": 2,
+          "expectedLabel": "3 attributs, 2 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "7cb644922622b70ff2f7f284aa5495d51ff018c8e59d6ca7f5b4e71e81036195"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q3",
+          "num": "3",
+          "statement": "Quels sont les libellés des options gratuites proposées pour les voyages réservés par le client Nicolas Barbier ?",
+          "expectedCols": 1,
+          "expectedRows": 3,
+          "expectedLabel": "1 attribut, 3 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "919755ae1427ec1488ab1f9212507868d7da605bf22cfc2b84828006d2721436"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure",
+            "null"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q4",
+          "num": "4",
+          "statement": "Quels sont les noms, prénoms et villes de résidence des clients ayant réservé un voyage à destination d'Istanbul partant de leur ville de résidence ?",
+          "expectedCols": 3,
+          "expectedRows": 5,
+          "expectedLabel": "3 attributs, 5 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "02366fd4622207185eaa00d1e6e569d295b202ea1d55d13319404bbc083a5a6b"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure"
+          ],
+          "sameAs": null
+        }
+      ]
+    },
+    {
+      "name": "Utilisation des opérateurs ensemblistes et équivalences",
+      "items": [
+        {
+          "type": "instruction",
+          "text": "Formulez les requêtes suivantes en faisant appel aux opérateurs ensemblistes."
+        },
+        {
+          "type": "question",
+          "id": "q5",
+          "num": "5",
+          "statement": "Quelles sont les villes de départ d'un voyage dans lesquelles résident des clients ?",
+          "expectedCols": 1,
+          "expectedRows": 4,
+          "expectedLabel": "1 attribut, 4 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "015f5b2122b802e1f89eda75c9951446cff4af8102b7536a0d6dfd6dd28e7706"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "intersection"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q6",
+          "num": "6",
+          "statement": "Quels sont les libellés des options communes aux voyages d'identifiants 354 et 952 ?",
+          "expectedCols": 1,
+          "expectedRows": 3,
+          "expectedLabel": "1 attribut, 3 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "9d01aa0af7bda8613261abdfd1018c5668ff0a07574ada300d9a7d337d049c97"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "intersection",
+            "imbrication"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q7",
+          "num": "7",
+          "statement": "Donnez les identifiants, villes d'arrivée et pays d'arrivée des voyages pour lesquels il n'y a aucune réservation.",
+          "expectedCols": 3,
+          "expectedRows": 14,
+          "expectedLabel": "3 attributs, 14 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "9ea3d283d9c4a2138ff3f7633a96070a0170413081ada7397cefa8b164db7d9f"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "anti-jointure",
+            "différence",
+            "imbrication"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q8",
+          "num": "8",
+          "statement": "Quels sont les libellés des options gratuites pour le voyage d'identifiant 354 et ceux des options payantes pour le voyage d'identifiant 952 ?",
+          "expectedCols": 1,
+          "expectedRows": 5,
+          "expectedLabel": "1 attribut, 5 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "cee51ff8ae0d58f0798fba47e71e9c659c28d59f69b99658c42a5747f18dd902"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "union",
+            "imbrication",
+            "null"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "instruction",
+          "text": "Formulez les requêtes suivantes en ne faisant pas appel aux opérateurs ensemblistes."
+        },
+        {
+          "type": "question",
+          "id": "q9",
+          "num": "9",
+          "statement": "Quels sont les identifiants, villes d'arrivée et pays d'arrivée des voyages offrant à la fois les options de visite guidée et de piscine ?",
+          "expectedCols": 3,
+          "expectedRows": 1,
+          "expectedLabel": "3 attributs, 1 tuple",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "e7bb2d84042a0266fbd762703f15531d75b5c0ade025abaf1922d828499cac89"
+          ],
+          "hashOrdered": null,
+          "difficulty": 3,
+          "tags": [
+            "jointure",
+            "imbrication",
+            "semi-jointure"
+          ],
+          "sameAs": null
+        },
+        {
+          "type": "question",
+          "id": "q10",
+          "num": "10",
+          "statement": "Donnez les noms et prénoms des clients qui n'ont aucune réservation.",
+          "expectedCols": 2,
+          "expectedRows": 11,
+          "expectedLabel": "2 attributs, 11 tuples",
+          "orderSensitive": false,
+          "hashesSorted": [
+            "efc873ae88cea5547163bc43fefc4b5ab78ea7be1c2069491b4007022d98b4a8"
+          ],
+          "hashOrdered": null,
+          "difficulty": 2,
+          "tags": [
+            "imbrication",
+            "anti-jointure",
+            "not-exists"
+          ],
+          "sameAs": null
+        }
+      ]
+    },
+    {
+      "name": "Création et modification d'attributs",
+      "items": [
+        {
+          "type": "instruction",
+          "text": "Formulez les requêtes suivantes en pensant générer, avec la commande `DESCRIBE`, un affichage permettant de vérifier la validité des réponses et, à la fin de la séance, penser à annuler les modifications faites pour laisser la base de données dans l'état initial."
+        },
+        {
+          "type": "question",
+          "id": "q11",
+          "num": "11",
+          "statement": "Ajoutez les attributs correspondant au tarif enfant et au nombre d'enfants.",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": null,
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null,
+          "theoryNote": "Question de cours - pas d'auto-évaluation."
+        },
+        {
+          "type": "question",
+          "id": "q12",
+          "num": "12",
+          "statement": "Doublez la taille possible du libellé d'une option.",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": null,
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null,
+          "theoryNote": "Question de cours - pas d'auto-évaluation."
+        },
+        {
+          "type": "question",
+          "id": "q13",
+          "num": "13",
+          "statement": "En se basant sur les données actuelles, définissez une contrainte de domaine pour les catégories. Vérifiez en essayant d'ajouter un client ne respectant pas cette contrainte.",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": null,
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null,
+          "theoryNote": "Question de cours - pas d'auto-évaluation."
+        },
+        {
+          "type": "question",
+          "id": "q14",
+          "num": "14",
+          "statement": "En se basant sur les données actuelles, définissez une contrainte de domaine pour les nombres d'étoiles. Vérifiez en essayant d'ajouter un voyage ne respectant pas cette contrainte.",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": null,
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null,
+          "theoryNote": "Question de cours - pas d'auto-évaluation."
+        },
+        {
+          "type": "question",
+          "id": "q15",
+          "num": "15",
+          "statement": "Créez une nouvelle relation `Capacite` permettant de connaître par hôtel et type de chambre `typeC`, pouvant être `SIMPLE`, `DOUBLE`, `DOUBLE LUXE`, `SUITE`, `SUITE JUNIOR` et `SUITE PRESTIGE`, le nombre de chambres `nbCh`.",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": null,
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null,
+          "theoryNote": "Question de cours - pas d'auto-évaluation."
+        }
+      ]
+    },
+    {
+      "name": "Mises à jour des données",
+      "items": [
+        {
+          "type": "instruction",
+          "text": "Formulez les requêtes suivantes en pensant générer, avec la commande `SELECT` ou `DESCRIBE`, un affichage permettant de vérifier la validité des réponses et, à la fin de la séance, penser à annuler les modifications faites pour laisser la base de données dans l'état initial."
+        },
+        {
+          "type": "question",
+          "id": "q16",
+          "num": "16",
+          "statement": "Le client numéro 2103 réserve toujours avec ses deux enfants et le client Thomas Jarolim avec son enfant unique.",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": null,
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null,
+          "theoryNote": "Question de cours - pas d'auto-évaluation."
+        },
+        {
+          "type": "question",
+          "id": "q17",
+          "num": "17",
+          "statement": "Un tarif enfant est moitié prix du tarif correspondant.",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": null,
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null,
+          "theoryNote": "Question de cours - pas d'auto-évaluation."
+        },
+        {
+          "type": "question",
+          "id": "q18",
+          "num": "18",
+          "statement": "Insérez les données suivantes.",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": null,
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null,
+          "theoryNote": "Question de cours - pas d'auto-évaluation."
+        }
+      ]
+    },
+    {
+      "name": "Archivage d'information et gestion de transactions",
+      "items": [
+        {
+          "type": "text",
+          "text": "Le mécanisme des transactions est ici illustré à travers un exemple d'archivage d'information."
+        },
+        {
+          "type": "text",
+          "text": "Dans un souci d'archivage des données, on désire régulièrement purger la relation `Reservation`,\nsans pour autant perdre les informations existantes."
+        },
+        {
+          "type": "question",
+          "id": "q19",
+          "num": "19",
+          "statement": "Créez une nouvelle relation `AncienneReservation` permettant d'archiver toutes les réservations programmées passées, la date de réservation étant remplacée par la date d'archivage.",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": null,
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null,
+          "theoryNote": "Question de cours - pas d'auto-évaluation."
+        },
+        {
+          "type": "question",
+          "id": "q20",
+          "num": "20",
+          "statement": "À l'aide d'une transaction, archivez les réservations antérieures à 2004.",
+          "expectedCols": null,
+          "expectedRows": null,
+          "expectedLabel": null,
+          "orderSensitive": false,
+          "hashesSorted": [],
+          "hashOrdered": null,
+          "difficulty": null,
+          "tags": [],
+          "sameAs": null,
+          "theoryNote": "Question de cours - pas d'auto-évaluation."
+        }
+      ]
+    }
+  ],
+  "subjectPdf": "sujet.pdf"
+}
