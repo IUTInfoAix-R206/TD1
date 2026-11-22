@@ -1,4 +1,4 @@
-# R2.06 - TD1 - Requêtes avec SQL
+# R2.06 - TD1 - Opérateurs ensemblistes, LDD et LCT
 
 TD de bases de données de l'IUT d'Aix-Marseille (ressource R2.06, Exploitation d'une base de données).
 

@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "tdId": "r2.06-td1",
   "tdLabel": "R2.06 - TD1",
-  "title": "Requêtes avec SQL",
+  "title": "Opérateurs ensemblistes, LDD et LCT",
   "intro": "Formulez, en SQL, sur la base de données exemple, les requêtes d'interrogation suivantes.",
   "database": {
     "name": "voyages",
