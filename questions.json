@@ -7,7 +7,8 @@
   "database": {
     "name": "voyages",
     "schemaFile": "data/schema.sql",
-    "insertFile": "data/insert.sql"
+    "insertFile": "data/insert.sql",
+    "oracleFile": "data/oracle.sql"
   },
   "canon": {
     "algo": "sha256",
@@ -262,10 +263,28 @@
           "orderSensitive": false,
           "hashesSorted": [],
           "hashOrdered": null,
-          "difficulty": null,
-          "tags": [],
+          "difficulty": 1,
+          "tags": [
+            "ddl"
+          ],
           "sameAs": null,
-          "theoryNote": "Modification du schéma ou des données (LDD/LMD) : pas d'auto-évaluation ; exécutez-la sous Oracle."
+          "session": {
+            "requires": [],
+            "probes": [],
+            "states": [
+              {
+                "objects": {
+                  "CARAC": "fa4a6362ef7fdf9c40ff1ea6eddaec3eb172b6d516c93ab985628e4d2ba1b9f2",
+                  "CLIENT": "6cf41d75945bea168bd5cfeacd5d7168b2f410ab3e6e2915d7fd2f60b8065187",
+                  "OPTIONV": "45100a6dcb963e8fdeeb035c94facd8cd8ca67ea038036a21e6e9158673b9cf7",
+                  "PLANNING": "81d94f5503004dc58c025d68d41d63eaf07be099ad855ab6388f894cc48b76c2",
+                  "RESERVATION": "50c69a374842e3e8b2203bf01463270718e3553ec75547c2749f8c46efda6856",
+                  "VOYAGE": "c1d3faf8bb3728fedf303e220cf175156ba159fc4108fa1f9352bfc677b31421"
+                },
+                "probes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          }
         },
         {
           "type": "question",
@@ -278,10 +297,28 @@
           "orderSensitive": false,
           "hashesSorted": [],
           "hashOrdered": null,
-          "difficulty": null,
-          "tags": [],
+          "difficulty": 1,
+          "tags": [
+            "ddl"
+          ],
           "sameAs": null,
-          "theoryNote": "Modification du schéma ou des données (LDD/LMD) : pas d'auto-évaluation ; exécutez-la sous Oracle."
+          "session": {
+            "requires": [],
+            "probes": [],
+            "states": [
+              {
+                "objects": {
+                  "CARAC": "fa4a6362ef7fdf9c40ff1ea6eddaec3eb172b6d516c93ab985628e4d2ba1b9f2",
+                  "CLIENT": "6cf41d75945bea168bd5cfeacd5d7168b2f410ab3e6e2915d7fd2f60b8065187",
+                  "OPTIONV": "8ad38f540b4adce836db8b01696cc5d0b53fedeaf788ac2eb03e7f5c32d2dcf5",
+                  "PLANNING": "8c21510574d50eaa35b6171e2657c4b73260e399474d9489e566ec2ff0fa9695",
+                  "RESERVATION": "e3bcd463cf8cc8288036630e1ee6e95a7982a2335ccaede96fb41f343beb7dbd",
+                  "VOYAGE": "c1d3faf8bb3728fedf303e220cf175156ba159fc4108fa1f9352bfc677b31421"
+                },
+                "probes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          }
         },
         {
           "type": "question",
@@ -294,10 +331,45 @@
           "orderSensitive": false,
           "hashesSorted": [],
           "hashOrdered": null,
-          "difficulty": null,
-          "tags": [],
+          "difficulty": 2,
+          "tags": [
+            "ddl"
+          ],
           "sameAs": null,
-          "theoryNote": "Modification du schéma ou des données (LDD/LMD) : pas d'auto-évaluation ; exécutez-la sous Oracle."
+          "session": {
+            "requires": [],
+            "probes": [
+              "UPDATE Client SET CATEGORIE = '1 IMPASSE DES DRAGONS' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = '1 impasse des dragons' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = '13600' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = 'BON' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = 'CEYRESTE' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = 'MARTIN NEVOT' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = 'MAUVAIS' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = 'MICKAEL' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = 'PRIVILEGIE' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = 'ZZZ' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = 'bon' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = 'ceyreste' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = 'martin nevot' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = 'mauvais' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = 'mickael' WHERE NUMCL = 2101",
+              "UPDATE Client SET CATEGORIE = 'privilegie' WHERE NUMCL = 2101"
+            ],
+            "states": [
+              {
+                "objects": {
+                  "CARAC": "fa4a6362ef7fdf9c40ff1ea6eddaec3eb172b6d516c93ab985628e4d2ba1b9f2",
+                  "CLIENT": "6cf41d75945bea168bd5cfeacd5d7168b2f410ab3e6e2915d7fd2f60b8065187",
+                  "OPTIONV": "45100a6dcb963e8fdeeb035c94facd8cd8ca67ea038036a21e6e9158673b9cf7",
+                  "PLANNING": "8c21510574d50eaa35b6171e2657c4b73260e399474d9489e566ec2ff0fa9695",
+                  "RESERVATION": "e3bcd463cf8cc8288036630e1ee6e95a7982a2335ccaede96fb41f343beb7dbd",
+                  "VOYAGE": "c1d3faf8bb3728fedf303e220cf175156ba159fc4108fa1f9352bfc677b31421"
+                },
+                "probes": "e7febd0086b6b7f8f74f7f276716ddbad5a7e01ac173a2f6ce8c9c3a089ae368"
+              }
+            ]
+          }
         },
         {
           "type": "question",
@@ -310,10 +382,41 @@
           "orderSensitive": false,
           "hashesSorted": [],
           "hashOrdered": null,
-          "difficulty": null,
-          "tags": [],
+          "difficulty": 2,
+          "tags": [
+            "ddl"
+          ],
           "sameAs": null,
-          "theoryNote": "Modification du schéma ou des données (LDD/LMD) : pas d'auto-évaluation ; exécutez-la sous Oracle."
+          "session": {
+            "requires": [],
+            "probes": [
+              "UPDATE Voyage SET NBETOILES = -1 WHERE IDV = 100",
+              "UPDATE Voyage SET NBETOILES = 0 WHERE IDV = 100",
+              "UPDATE Voyage SET NBETOILES = 1 WHERE IDV = 100",
+              "UPDATE Voyage SET NBETOILES = 2 WHERE IDV = 100",
+              "UPDATE Voyage SET NBETOILES = 3 WHERE IDV = 100",
+              "UPDATE Voyage SET NBETOILES = 4 WHERE IDV = 100",
+              "UPDATE Voyage SET NBETOILES = 5 WHERE IDV = 100",
+              "UPDATE Voyage SET NBETOILES = 6 WHERE IDV = 100",
+              "UPDATE Voyage SET NBETOILES = 7 WHERE IDV = 100",
+              "UPDATE Voyage SET NBETOILES = 665 WHERE IDV = 100",
+              "UPDATE Voyage SET NBETOILES = 666 WHERE IDV = 100",
+              "UPDATE Voyage SET NBETOILES = 667 WHERE IDV = 100"
+            ],
+            "states": [
+              {
+                "objects": {
+                  "CARAC": "fa4a6362ef7fdf9c40ff1ea6eddaec3eb172b6d516c93ab985628e4d2ba1b9f2",
+                  "CLIENT": "6cf41d75945bea168bd5cfeacd5d7168b2f410ab3e6e2915d7fd2f60b8065187",
+                  "OPTIONV": "45100a6dcb963e8fdeeb035c94facd8cd8ca67ea038036a21e6e9158673b9cf7",
+                  "PLANNING": "8c21510574d50eaa35b6171e2657c4b73260e399474d9489e566ec2ff0fa9695",
+                  "RESERVATION": "e3bcd463cf8cc8288036630e1ee6e95a7982a2335ccaede96fb41f343beb7dbd",
+                  "VOYAGE": "c1d3faf8bb3728fedf303e220cf175156ba159fc4108fa1f9352bfc677b31421"
+                },
+                "probes": "0227bc838bda4416b49eb87caf0518c593862a5ffbe9fc185af7d67d02c577d0"
+              }
+            ]
+          }
         },
         {
           "type": "question",
@@ -326,10 +429,43 @@
           "orderSensitive": false,
           "hashesSorted": [],
           "hashOrdered": null,
-          "difficulty": null,
-          "tags": [],
+          "difficulty": 2,
+          "tags": [
+            "ddl"
+          ],
           "sameAs": null,
-          "theoryNote": "Modification du schéma ou des données (LDD/LMD) : pas d'auto-évaluation ; exécutez-la sous Oracle."
+          "session": {
+            "requires": [],
+            "probes": [
+              "INSERT INTO Capacite (HOTEL, TYPEC, NBCH) VALUES ('Z', 'DOUBLE', 1)",
+              "INSERT INTO Capacite (HOTEL, TYPEC, NBCH) VALUES ('Z', 'DOUBLE LUXE', 1)",
+              "INSERT INTO Capacite (HOTEL, TYPEC, NBCH) VALUES ('Z', 'SIMPLE', 1)",
+              "INSERT INTO Capacite (HOTEL, TYPEC, NBCH) VALUES ('Z', 'SUITE', 1)",
+              "INSERT INTO Capacite (HOTEL, TYPEC, NBCH) VALUES ('Z', 'SUITE JUNIOR', 1)",
+              "INSERT INTO Capacite (HOTEL, TYPEC, NBCH) VALUES ('Z', 'SUITE PRESTIGE', 1)",
+              "INSERT INTO Capacite (HOTEL, TYPEC, NBCH) VALUES ('Z', 'ZZZ', 1)",
+              "INSERT INTO Capacite (HOTEL, TYPEC, NBCH) VALUES ('Z', 'double', 1)",
+              "INSERT INTO Capacite (HOTEL, TYPEC, NBCH) VALUES ('Z', 'double luxe', 1)",
+              "INSERT INTO Capacite (HOTEL, TYPEC, NBCH) VALUES ('Z', 'simple', 1)",
+              "INSERT INTO Capacite (HOTEL, TYPEC, NBCH) VALUES ('Z', 'suite', 1)",
+              "INSERT INTO Capacite (HOTEL, TYPEC, NBCH) VALUES ('Z', 'suite junior', 1)",
+              "INSERT INTO Capacite (HOTEL, TYPEC, NBCH) VALUES ('Z', 'suite prestige', 1)"
+            ],
+            "states": [
+              {
+                "objects": {
+                  "CAPACITE": "9e0712be8ceb162f7dc602acaa6434b5746d3e421c719bb7c8e81ce2ceb5fd61",
+                  "CARAC": "fa4a6362ef7fdf9c40ff1ea6eddaec3eb172b6d516c93ab985628e4d2ba1b9f2",
+                  "CLIENT": "6cf41d75945bea168bd5cfeacd5d7168b2f410ab3e6e2915d7fd2f60b8065187",
+                  "OPTIONV": "45100a6dcb963e8fdeeb035c94facd8cd8ca67ea038036a21e6e9158673b9cf7",
+                  "PLANNING": "8c21510574d50eaa35b6171e2657c4b73260e399474d9489e566ec2ff0fa9695",
+                  "RESERVATION": "e3bcd463cf8cc8288036630e1ee6e95a7982a2335ccaede96fb41f343beb7dbd",
+                  "VOYAGE": "c1d3faf8bb3728fedf303e220cf175156ba159fc4108fa1f9352bfc677b31421"
+                },
+                "probes": "8ae351ac834aa9929bee553e84d55ceeb37587769d713472eb7132698ecf8d4f"
+              }
+            ]
+          }
         }
       ]
     },
@@ -347,14 +483,36 @@
           "statement": "Le client numéro 2103 réserve toujours avec ses deux enfants et le client Thomas Jarolim avec son enfant unique.",
           "expectedCols": null,
           "expectedRows": null,
-          "expectedLabel": null,
+          "expectedLabel": "4 tuples",
           "orderSensitive": false,
           "hashesSorted": [],
           "hashOrdered": null,
-          "difficulty": null,
-          "tags": [],
+          "difficulty": 2,
+          "tags": [
+            "dml",
+            "imbrication",
+            "semi-jointure"
+          ],
           "sameAs": null,
-          "theoryNote": "Modification du schéma ou des données (LDD/LMD) : pas d'auto-évaluation ; exécutez-la sous Oracle."
+          "session": {
+            "requires": [
+              "q11"
+            ],
+            "probes": [],
+            "states": [
+              {
+                "objects": {
+                  "CARAC": "fa4a6362ef7fdf9c40ff1ea6eddaec3eb172b6d516c93ab985628e4d2ba1b9f2",
+                  "CLIENT": "6cf41d75945bea168bd5cfeacd5d7168b2f410ab3e6e2915d7fd2f60b8065187",
+                  "OPTIONV": "45100a6dcb963e8fdeeb035c94facd8cd8ca67ea038036a21e6e9158673b9cf7",
+                  "PLANNING": "81d94f5503004dc58c025d68d41d63eaf07be099ad855ab6388f894cc48b76c2",
+                  "RESERVATION": "f9362f29e7ddc74882ef95cb080309b8e8d6528a88c6a9d5bfa78d171d81bb5b",
+                  "VOYAGE": "c1d3faf8bb3728fedf303e220cf175156ba159fc4108fa1f9352bfc677b31421"
+                },
+                "probes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          }
         },
         {
           "type": "question",
@@ -363,14 +521,34 @@
           "statement": "Un tarif enfant est moitié prix du tarif correspondant.",
           "expectedCols": null,
           "expectedRows": null,
-          "expectedLabel": null,
+          "expectedLabel": "80 tuples",
           "orderSensitive": false,
           "hashesSorted": [],
           "hashOrdered": null,
-          "difficulty": null,
-          "tags": [],
+          "difficulty": 1,
+          "tags": [
+            "dml"
+          ],
           "sameAs": null,
-          "theoryNote": "Modification du schéma ou des données (LDD/LMD) : pas d'auto-évaluation ; exécutez-la sous Oracle."
+          "session": {
+            "requires": [
+              "q11"
+            ],
+            "probes": [],
+            "states": [
+              {
+                "objects": {
+                  "CARAC": "fa4a6362ef7fdf9c40ff1ea6eddaec3eb172b6d516c93ab985628e4d2ba1b9f2",
+                  "CLIENT": "6cf41d75945bea168bd5cfeacd5d7168b2f410ab3e6e2915d7fd2f60b8065187",
+                  "OPTIONV": "45100a6dcb963e8fdeeb035c94facd8cd8ca67ea038036a21e6e9158673b9cf7",
+                  "PLANNING": "2eeaa77ded3f2353a2f2e77f34384d467eef384074c1b01ff6cce307b0743c48",
+                  "RESERVATION": "50c69a374842e3e8b2203bf01463270718e3553ec75547c2749f8c46efda6856",
+                  "VOYAGE": "c1d3faf8bb3728fedf303e220cf175156ba159fc4108fa1f9352bfc677b31421"
+                },
+                "probes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          }
         },
         {
           "type": "question",
@@ -379,14 +557,35 @@
           "statement": "Insérez les données suivantes.",
           "expectedCols": null,
           "expectedRows": null,
-          "expectedLabel": null,
+          "expectedLabel": "12 tuples",
           "orderSensitive": false,
           "hashesSorted": [],
           "hashOrdered": null,
-          "difficulty": null,
-          "tags": [],
+          "difficulty": 1,
+          "tags": [
+            "dml"
+          ],
           "sameAs": null,
-          "theoryNote": "Modification du schéma ou des données (LDD/LMD) : pas d'auto-évaluation ; exécutez-la sous Oracle."
+          "session": {
+            "requires": [
+              "q15"
+            ],
+            "probes": [],
+            "states": [
+              {
+                "objects": {
+                  "CAPACITE": "ff14c7f39d6796ccd185ff253b5aef61c2e1176441d902e929b0b719e7a757bb",
+                  "CARAC": "fa4a6362ef7fdf9c40ff1ea6eddaec3eb172b6d516c93ab985628e4d2ba1b9f2",
+                  "CLIENT": "6cf41d75945bea168bd5cfeacd5d7168b2f410ab3e6e2915d7fd2f60b8065187",
+                  "OPTIONV": "45100a6dcb963e8fdeeb035c94facd8cd8ca67ea038036a21e6e9158673b9cf7",
+                  "PLANNING": "8c21510574d50eaa35b6171e2657c4b73260e399474d9489e566ec2ff0fa9695",
+                  "RESERVATION": "e3bcd463cf8cc8288036630e1ee6e95a7982a2335ccaede96fb41f343beb7dbd",
+                  "VOYAGE": "c1d3faf8bb3728fedf303e220cf175156ba159fc4108fa1f9352bfc677b31421"
+                },
+                "probes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          }
         }
       ]
     },
@@ -412,10 +611,29 @@
           "orderSensitive": false,
           "hashesSorted": [],
           "hashOrdered": null,
-          "difficulty": null,
-          "tags": [],
+          "difficulty": 2,
+          "tags": [
+            "ddl"
+          ],
           "sameAs": null,
-          "theoryNote": "Modification du schéma ou des données (LDD/LMD) : pas d'auto-évaluation ; exécutez-la sous Oracle."
+          "session": {
+            "requires": [],
+            "probes": [],
+            "states": [
+              {
+                "objects": {
+                  "ANCIENNERESERVATION": "33b3205d2e56ffbf26b5d97ee25502f096cf75f114236880ef8b74c8fa69fa01",
+                  "CARAC": "fa4a6362ef7fdf9c40ff1ea6eddaec3eb172b6d516c93ab985628e4d2ba1b9f2",
+                  "CLIENT": "6cf41d75945bea168bd5cfeacd5d7168b2f410ab3e6e2915d7fd2f60b8065187",
+                  "OPTIONV": "45100a6dcb963e8fdeeb035c94facd8cd8ca67ea038036a21e6e9158673b9cf7",
+                  "PLANNING": "8c21510574d50eaa35b6171e2657c4b73260e399474d9489e566ec2ff0fa9695",
+                  "RESERVATION": "e3bcd463cf8cc8288036630e1ee6e95a7982a2335ccaede96fb41f343beb7dbd",
+                  "VOYAGE": "c1d3faf8bb3728fedf303e220cf175156ba159fc4108fa1f9352bfc677b31421"
+                },
+                "probes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          }
         },
         {
           "type": "question",
@@ -424,14 +642,38 @@
           "statement": "À l'aide d'une transaction, archivez les réservations antérieures à 2004.",
           "expectedCols": null,
           "expectedRows": null,
-          "expectedLabel": null,
+          "expectedLabel": "AncienneReservation : 14 tuples, Reservation : 18 tuples",
           "orderSensitive": false,
           "hashesSorted": [],
           "hashOrdered": null,
-          "difficulty": null,
-          "tags": [],
+          "difficulty": 3,
+          "tags": [
+            "dml",
+            "transaction"
+          ],
           "sameAs": null,
-          "theoryNote": "Modification du schéma ou des données (LDD/LMD) : pas d'auto-évaluation ; exécutez-la sous Oracle."
+          "session": {
+            "requires": [
+              "q11",
+              "q16",
+              "q19"
+            ],
+            "probes": [],
+            "states": [
+              {
+                "objects": {
+                  "ANCIENNERESERVATION": "c735ad813b42a55bef3e3fae974b27a9230c7e84945229cf5b20a5904fd76e91",
+                  "CARAC": "fa4a6362ef7fdf9c40ff1ea6eddaec3eb172b6d516c93ab985628e4d2ba1b9f2",
+                  "CLIENT": "6cf41d75945bea168bd5cfeacd5d7168b2f410ab3e6e2915d7fd2f60b8065187",
+                  "OPTIONV": "45100a6dcb963e8fdeeb035c94facd8cd8ca67ea038036a21e6e9158673b9cf7",
+                  "PLANNING": "81d94f5503004dc58c025d68d41d63eaf07be099ad855ab6388f894cc48b76c2",
+                  "RESERVATION": "ef869df7ca0d5114994cd3de4df42e06365ee59a05ebb6755703511d82338eb6",
+                  "VOYAGE": "c1d3faf8bb3728fedf303e220cf175156ba159fc4108fa1f9352bfc677b31421"
+                },
+                "probes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          }
         }
       ]
     }
